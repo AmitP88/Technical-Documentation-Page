@@ -1,0 +1,12 @@
+@media (min-width: 500px) {
+    #Section_1 {
+        background-color: aquamarine;
+    }
+}
+
+@media (min-width: 1000px) {
+    #Section_1 {
+        background-color: rebeccapurple;
+    }
+}
+
