@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    margin: 5%;
+    font-weight: bold;
+}
+
+.nav-link {
+    text-align: center;
+    text-decoration-line: none;
+    color: black;
+    padding: 2%;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.main-section {
+    margin: 10%;
+}
+
+.main-section header {
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+.description {
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+span {
+    color: blue;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+li {
+    list-style-type: none;
+}
+
+.answer {
+    color: red;
+    font-weight: bold;
+    text-decoration-line: underline;    
+}

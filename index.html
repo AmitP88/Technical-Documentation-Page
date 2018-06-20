@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./media_queries.css">
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
@@ -12,7 +13,9 @@
 <body>
     <header>
         <nav id="navbar">
-            <header>CSS Flexbox</header>
+            <header>
+                <h1>CSS Flexbox</h1>
+            </header>
             <a href="#What_is_Flexbox?" class="nav-link">What is Flexbox?</a>
             <a href="#The_Flex_Container" class="nav-link">The Flex Container</a>
             <a href="#Flex_Direction" class="nav-link">Flex Direction</a>
@@ -22,48 +25,191 @@
     </header>
     <main id="main-doc">
         <section class="main-section" id="What_is_Flexbox?">
-            <header>What is Flexbox?</header>
-            <p></p>
-            <code></code>            
-            <p></p>
+            <header>
+                <h3>What is Flexbox?</h3>
+            </header>
+            <p class="description">CSS Flexible Box Layout ( or “Flexbox”) is a module of CSS
+                that defines a CSS box model optimized for user interface design, and the layout of items
+                in one dimension. In the flex layout model, the children of a flex container can be laid out
+                in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking
+                to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. </p>
+            <code class="example">
+                <p>Example: </p>
+                .box {
+                    display: flex;
+                    justify-content: space-between;
+                }
+        <pre>
+            &lt;div class="box"&gt;
+            &lt;div&gt;One&lt;/div&gt;
+            &lt;div&gt;Two&lt;/div&gt;
+            &lt;div&gt;Three
+            &lt;br&gt;has
+            &lt;br&gt;extra
+            &lt;br&gt;text
+            &lt;/div&gt;
+            &lt;/div&gt;    
+        </pre>
+            </code>            
+            <p class="question"><span>Question: </span>What is CSS Flexbox?</p>
             <li>
-                <code></code>
+                <p class="answer">Answer: </p>
+                <code>(See What is Flexbox? Description) If your answer is phrased differently, that's okay too!</code>
             </li>
         </section>
         <section class="main-section" id="The_Flex_Container">
-            <header>The Flex Container</header>
-            <p></p>
-            <code></code>            
-            <p></p>
+            <header>
+                <h3>The Flex Container</h3> 
+            </header>
+            <p class="description"> An area of a document laid out using flexbox is called a flex container.
+                To create a flex container, we set the value of the area's container's display property to flex or inline-flex.
+                As soon as we do this the direct children of that container become flex items. As with all properties in CSS,
+                some initial values are defined, so when creating a flex container all of the contained flex items will behave in the following way.
+                    Items display in a row (the flex-direction property's default is row).
+                    The items start from the start edge of the main axis.
+                    The items do not stretch on the main dimension, but can shrink.
+                    The items will stretch to fill the size of the cross axis.
+                    The flex-basis property is set to auto.
+                    The flex-wrap property is set to nowrap.
+                    The result of this is that your items will all line up in a row, using the size of the content as their size in the main axis.
+                    If there are more items than can fit in the container, they will not wrap but will instead overflow.
+                    If some items are taller than others, all items will stretch along the cross axis to fill its full size.</p>
+            <code class="example">
+                <p>Example: </p>
+                <img src="./flex-container-example.jpg" alt="flex-container-example">
+                .box {
+                    display: flex;
+                }
+        <pre>
+            &lt;div class="box"&gt;
+            &lt;div&gt;One&lt;/div&gt;
+            &lt;div&gt;Two&lt;/div&gt;
+            &lt;div&gt;Three
+            &lt;br&gt;has
+            &lt;br&gt;extra
+            &lt;br&gt;text
+            &lt;/div&gt;
+            &lt;/div&gt;    
+        </pre>                
+            </code>            
+            <p class="question"><span>Question: </span>Create a div element with class of  “container” containing 3 paragraph elements within it.
+                Write CSS that makes the div element into a flex container.</p>
             <li>
-                <code></code>
+                <p class="answer">Answer: </p>
+                <code>
+                    .container {
+                        display: flex;
+                    }
+    <pre>
+        &lt;div class="container"&gt;
+            &lt;p&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;/p&gt;
+        &lt;/div&gt;    
+    </pre>                    
+                </code>
             </li>
         </section>
         <section class="main-section" id="Flex_Direction">
-            <header>Flex Direction</header>
-            <p></p>
-            <code></code>            
-            <p></p>
+            <header>
+                <h3>Flex Direction</h3>
+            </header>
+            <p class="description">Adding the flex-direction property to the flex container allows us to change the direction
+                in which our flex items display. Setting flex-direction: row-reverse will keep the items displaying along the row,
+                however the start and end lines are switched. If we change flex-direction to column the main axis switches and our
+                items now display in a column. Set column-reverse and the start and end lines are again switched.
+                The live example below has flex-direction set to row-reverse. Try the other values — row, column and column-reverse
+                 — to see what happens to the content.</p>
+                <img src="./main-axis.jpg" alt="main-axis">
+            <code class="example">
+                <p>Example: </p>
+                <img src="./flex-direction-example.jpg" alt="flex-direction-example">
+                .box {
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+        <pre>
+            &lt;div class="box"&gt;
+                &lt;div&gt;One&lt;/div&gt;
+                &lt;div&gt;Two&lt;/div&gt;
+                &lt;div&gt;Three&lt;/div&gt;
+            &lt;/div&gt;    
+        </pre>
+            </code>
+            <p class="question"><span>Question: </span>Create a div element with class “flexbox” that contains 3 div elements. Write CSS that not only makes the “flexbox” a flex container (see Flex Container for details), but also give “flexbox” a flex-direction of row.</p>
             <li>
-                <code></code>
+                <p class="answer">Answer: </p>
+                <code>
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+        }
+    <pre>
+        &lt;div class="flexbox"&gt;
+            &lt;div&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;    
+    </pre>
+                </code>
             </li>
         </section>
         <section class="main-section" id="Spacing_on_the_Main_Axis">
-            <header>Spacing on the Main Axis</header>
-            <p></p>
-            <code></code>
-            <p></p>
+            <header>
+                <h3>Spacing on the Main Axis</h3>
+            </header>
+            <p class="description">When working with flexbox you need to think in terms of two axes — the main axis and the cross axis. The main axis is defined by the flex-direction property, and the cross axis runs perpendicular to it. Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from the outset. </p>
+            <img src="./axis.jpg" alt="axis">
+            <img src="justify-content.jpg" alt="justify-content">
+            <code class="example">
+                Example: (see justify-content image above)
+            </code>
+            <p class="question"><span>Question: </span>Create a div element with class called container that has 3 div elements inside of it. Write CSS so that the container div is turned into a flex container with flex-direction of row. Arrange the div elements within the container using justify-content so that the div elements in the container are at the end of the container.</p>
             <li>
-                <code></code>                
+                <p class="answer">Answer: </p>
+                <code>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    <pre>
+        &lt;div class="container"&gt;
+            &lt;div&gt;1&lt;/div&gt;
+            &lt;div&gt;2&lt;/div&gt;
+            &lt;div&gt;3&lt;/div&gt;
+        &lt;/div&gt;    
+    </pre>
+                </code>                
             </li>
         </section>
         <section class="main-section" id="Spacing_on_the_Cross_Axis">
-            <header>Spacing on the Cross Axis</header>
-            <p></p>
-            <code></code>            
-            <p></p>
+            <header>
+                <h3>Spacing on the Cross Axis</h3>
+            </header>
+            <p class="description">The cross axis is the axis perpendicular to the main axis. If the main axis is horizontal (meaning that flex-direction is set to row or row-reverse), the cross axis would be vertical. If  the main axis is vertical (meaning that flex-direction is set to column or column-reverse), the cross axis would be horizontal.</p>
+            <img src="cross-axis-align-items.jpg" alt="cross-axis-align-items">
+            <code class="example">
+                Example: 
+                <img src="cross-axis-align-items-example.jpg" alt="cross-axis-align-items-example">
+            </code>            
+            <p class="question"><span>Question: </span>Create a div element with class called container that has 3 div elements inside of it. Write CSS so that the container div is turned into a flex container with flex-direction of row. Arrange the div elements within the container using align-items so that the div elements in the container are at the end of the cross axis.</p>
             <li>
-                <code></code>
+                <p class="answer">Answer: </p>
+                <code>
+            .container {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+            }
+    <pre>
+        &lt;div class="container"&gt;
+            &lt;div&gt;1&lt;/div&gt;
+            &lt;div&gt;2&lt;/div&gt;
+            &lt;div&gt;3&lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+                </code>
             </li>
         </section>
     </main>
