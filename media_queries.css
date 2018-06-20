@@ -22,12 +22,15 @@
         justify-content: space-between;
     }
 
-    body header {
-        width: 100%;
+    .navbar-container {
+        position: fixed;
+        width: 20%;
     }
 
     #main-doc {
-        width: 250%;
+        width: 50%;
+        display: block;
+        margin: 0 auto;
     }
 
 
