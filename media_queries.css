@@ -9,7 +9,7 @@
     #navbar {
         display: flex;
         flex-direction: column;
-        margin: 5%;
+        /* margin: 5%; */
     }
     
 
@@ -28,7 +28,8 @@
     }
 
     #main-doc {
-        width: 50%;
+        position: relative;
+        left: 500px;
         display: block;
         margin: 0 auto;
     }
