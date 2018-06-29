@@ -3,7 +3,7 @@ h1 {
     margin: 5%;
     font-weight: bold;
 }
-
+.navbar{x-index:999;}
 .nav-link {
     text-align: center;
     text-decoration-line: none;
